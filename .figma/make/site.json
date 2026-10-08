@@ -1,7 +1,8 @@
 {
-  "description": "Create a professional portfolio showcasing UNICEF-related projects, including annotated visuals, certificates, and a structured 30-60-90 day plan for aspiring WASH data analysts.",
+  "title": "WASH in Schools | Simbarashe Dikito",
+  "description": "Simbarashe Dikito's WASH in Schools portfolio: a five-school Chitungwiza pilot, KoboToolbox field data, Power BI insights and professional learning.",
   "robots": {
-    "index": false
+    "index": true
   },
   "accessibility": {
     "addBypassLinks": false,
