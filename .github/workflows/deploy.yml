@@ -12,7 +12,7 @@ permissions:
 
 concurrency:
   group: "pages"
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -28,16 +28,17 @@ jobs:
           cache: "npm"
 
       - name: Install dependencies
-        run: npm ci
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
+        run: npm install
 
       - name: Build with Vite
         env:
           VITE_CONFIG_NATIVE_IGNORE_WARNING: "true"
           GITHUB_PAGES_BASE: "${{ github.event.repository.name }}"
+          NODE_OPTIONS: "--no-warnings"
         run: npm run build
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
