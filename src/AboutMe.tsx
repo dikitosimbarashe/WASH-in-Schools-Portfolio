@@ -72,11 +72,11 @@ export default function AboutMe() {
               dikitosimbarashe@gmail.com <span aria-hidden="true">↗</span>
             </a>
             <a
-              href="https://github.com/simbarashe-dikito"
+              href="https://github.com/dikitosimbarashe"
               target="_blank"
               rel="noopener noreferrer"
             >
-              GitHub / simbarashe-dikito <span aria-hidden="true">↗</span>
+              GitHub / dikitosimbarashe <span aria-hidden="true">↗</span>
             </a>
             <p>Chitungwiza, Zimbabwe</p>
           </div>
