@@ -427,7 +427,7 @@ function App() {
             <div className="profile">
               <img
                 className="avatar profile-photo"
-                src="/assets/simbarashe-portrait.jpg"
+                src={`assets/simbarashe-portrait.jpg`}
                 alt="Simbarashe Dikito"
               />
               <div>
@@ -546,7 +546,7 @@ function App() {
                 <button
                   onClick={() =>
                     setModal({
-                      src: `/assets/${
+                      src: `assets/${
                         activeTab === "dashboard"
                           ? "power-bi-dashboard.jpg"
                           : "kobo-survey.png"
@@ -563,7 +563,7 @@ function App() {
               </div>
               <div className={`screenshot-frame ${activeTab}`}>
                 <img
-                  src={`/assets/${
+                  src={`assets/${
                     activeTab === "dashboard"
                       ? "power-bi-dashboard.jpg"
                       : "kobo-survey.png"
@@ -812,12 +812,12 @@ function App() {
                   <button
                     className="certificate-image"
                     onClick={() =>
-                      setModal({ src: `/assets/${c.file}.png`, title: c.title })
+                      setModal({ src: `assets/${c.file}.png`, title: c.title })
                     }
                     aria-label={`Enlarge ${c.title} certificate`}
                   >
                     <img
-                      src={`/assets/${c.file}.png`}
+                      src={`assets/${c.file}.png`}
                       alt={`${c.title} certificate awarded to Simbarashe Dikito`}
                     />
                     <span>
@@ -836,7 +836,7 @@ function App() {
                     </div>
                     <div className="certificate-bottom">
                       <span>ID: {c.id}</span>
-                      <a href={`/assets/${c.file}.pdf`} download>
+                      <a href={`assets/${c.file}.pdf`} download>
                         <Icon name="download" size={15} /> PDF
                       </a>
                     </div>
@@ -917,7 +917,7 @@ function App() {
                 <Icon name="download" size={18} />
               </button>
               <a
-                href="/assets/power-bi-dashboard.jpg"
+                href={`assets/power-bi-dashboard.jpg`}
                 download
                 className="resource-row"
               >

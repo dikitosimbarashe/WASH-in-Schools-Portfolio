@@ -29,7 +29,7 @@ export default function AboutMe() {
         <aside className="about-profile">
           <div className="about-photo">
             <img
-              src={`/assets/simbarashe-${
+              src={`assets/simbarashe-${
                 portrait === "professional" ? "portrait" : "field"
               }.jpg`}
               alt={
