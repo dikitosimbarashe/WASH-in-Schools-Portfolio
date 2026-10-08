@@ -32,26 +32,48 @@ jobs:
           node -v
           npm -v
 
-      - name: Install dependencies
-        run: npm install --no-audit --no-fund
+      - name: Clean stale lock / cache artifacts
+        run: |
+          rm -f pnpm-lock.yaml
+          rm -f bun.lockb
+          rm -rf node_modules
+          npm cache clean --force || true
 
-      - name: Type check
-        run: npx tsc --noEmit
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund --prefer-offline=false
+
+      - name: Type check (src only)
+        run: npx tsc --noEmit -p tsconfig.json
 
       - name: Build with Vite
         env:
           VITE_CONFIG_NATIVE_IGNORE_WARNING: "true"
           GITHUB_PAGES_BASE: "${{ github.event.repository.name }}"
           NODE_OPTIONS: "--no-warnings"
-        run: npm run build
+        run: |
+          set -x
+          node -e "console.log('node ok', process.version)"
+          npx --no-install vite --version
+          npx --no-install vite build --mode production 2>&1 | tee build.log
+          test -d dist
+          test -f dist/index.html
+          echo "BUILD_OK"
+
+      - name: Upload build log on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-log
+          path: build.log
+          if-no-files-found: ignore
 
       - name: Verify build output
         run: |
-          test -d dist
-          test -f dist/index.html
           ls -la dist
           echo "--- dist/index.html ---"
           sed -n '1,40p' dist/index.html
+          echo "--- dist/assets ---"
+          ls -la dist/assets
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
