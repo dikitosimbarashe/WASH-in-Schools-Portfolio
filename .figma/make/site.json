@@ -1,0 +1,10 @@
+{
+  "description": "Create a professional portfolio showcasing UNICEF-related projects, including annotated visuals, certificates, and a structured 30-60-90 day plan for aspiring WASH data analysts.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

@@ -1,0 +1,170 @@
+/* Larger reading sizes preserve the existing hierarchy without scaling the layout. */
+@media screen {
+  body { font-size: 16px; }
+  .navigation { font-size: 14px; gap: 23px; }
+  .header-cta, .button, .hero-actions .button { font-size: 13px; }
+  .brand-name { font-size: 11px; }
+  .brand-name > span { font-size: 10px; }
+  .eyebrow, .evidence-notes .eyebrow, .certificate-body .eyebrow, .gratitude-label .eyebrow { font-size: 11px; letter-spacing: 1.2px; }
+  .hero-description, .section-intro, .gratitude p { font-size: 16px; line-height: 1.85; }
+  .hero-description { max-width: 470px; }
+  .section-intro { max-width: 790px; }
+  .profile strong { font-size: 14px; }
+  .profile div > span { font-size: 12px; flex-wrap: wrap; line-height: 1.6; }
+  .avatar { width: 44px; height: 44px; }
+  .hero-actions { flex-wrap: wrap; gap: 14px 20px; }
+  .hero-footnote, .pill, .small, .plan-note, .certificate-disclaimer { font-size: 12px; }
+  .hero-footnote { line-height: 1.7; align-items: flex-start; }
+  .hero-footnote svg { margin-top: 3px; }
+  .stat-top { font-size: 13px; line-height: 1.5; align-items: flex-start; }
+  .stat > strong { font-size: 44px; }
+  .stat p { font-size: 12px; line-height: 1.7; }
+  .map-topline { font-size: 9px; letter-spacing: .8px; }
+  .map-bottom { font-size: 10px; flex-wrap: wrap; }
+  .map-school-card strong, .map-note strong { font-size: 13px; }
+  .map-school-card div > span, .map-note div > span { font-size: 11px; }
+  .map-school-card { bottom: 68px; }
+  .map-note { bottom: -32px; }
+  .evidence-tabs button, .data-details summary { font-size: 14px; }
+  .evidence-tabs > span, .tool-label { font-size: 10px; }
+  .visual-top button, .visual-footer { font-size: 12px; }
+  .visual-footer { flex-wrap: wrap; }
+  .evidence-notes h3 { font-size: 31px; }
+  .insight h4, .finding strong, .reflection strong { font-size: 14px; }
+  .insight p, .finding p, .approach-card p, .plan-card li, .reflection p, .reference-card p { font-size: 14px; line-height: 1.85; }
+  .insight { margin-top: 21px; }
+  .insight-number { width: 28px; height: 28px; font-size: 11px; }
+  .finding-tag, .approach-tool, .plan-day > span, .deliverable > span { font-size: 10px; }
+  .data-details summary span, .data-caveat { font-size: 12px; }
+  table { font-size: 14px; }
+  th, .table-status { font-size: 12px; }
+  .approach-card h3, .plan-card h3, .downloads-card h3, .reference-card h3 { font-size: 21px; }
+  .approach-number { font-size: 14px; }
+  .plan-subtitle, .deliverable p { font-size: 13px; }
+  .plan-day strong { font-size: 36px; }
+  .plan-card ul { gap: 17px; }
+  .certificate-body h3 { font-size: 19px; min-height: 54px; }
+  .certificate-meta, .certificate-bottom > span, .certificate-bottom a, .certificate-image > span { font-size: 11px; line-height: 1.7; }
+  .certificate-body { padding-inline: 20px; }
+  .signature > span { font-size: 10px; line-height: 1.7; }
+  .downloads-card > p, .resource-row strong { font-size: 14px; }
+  .resource-row small, .pending, .reference-status, .reference-card .pill { font-size: 12px; line-height: 1.6; }
+  .resource-row { padding-block: 18px; }
+  .footer-name { font-size: 13px; }
+  .footer-name > span, footer p, .back-top { font-size: 11px; }
+}
+.profile-photo { object-fit: cover; object-position: 50% 10%; }
+.about-section { padding-top: 72px; padding-bottom: 60px; border-bottom: 1px solid var(--line); }
+.about-grid { display: grid; grid-template-columns: 330px minmax(0, 1fr); gap: 58px; align-items: start; }
+.about-profile { min-width: 0; }
+.about-photo { position: relative; overflow: hidden; border-radius: 7px; background: var(--mint); aspect-ratio: 3 / 4; }
+.about-photo > img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 13%; display: block; }
+.portrait-caption { position: absolute; inset: auto 0 0; padding: 50px 25px 24px; background: linear-gradient(transparent, #203a32c9); color: #fff; }
+.portrait-caption > span { font-size: 10px; letter-spacing: 1.5px; }
+.portrait-caption strong { display: block; font-family: 'Libre Caslon Display', serif; font-size: 27px; line-height: 1.2; font-weight: 400; margin-top: 8px; }
+.portrait-toggle { display: flex; padding: 5px; gap: 5px; background: #edf1e7; border: 1px solid var(--line); border-radius: 5px; margin-top: 13px; }
+.portrait-toggle button { flex: 1; padding: 11px 9px; border-radius: 3px; font-size: 12px; color: #687763; }
+.portrait-toggle button[aria-pressed="true"] { background: #fff; color: var(--green); box-shadow: 0 1px 5px #203a3210; font-weight: 600; }
+.about-contact { display: flex; flex-direction: column; gap: 15px; padding: 27px 0 0; }
+.about-contact a { display: flex; justify-content: space-between; gap: 8px; font-size: 13px; color: var(--green); line-height: 1.6; overflow-wrap: anywhere; }
+.about-contact a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.about-contact p { font-size: 13px; color: #76806e; }
+.about-content > h2 { font-size: 42px; margin-top: 14px; }
+.about-lead { font-size: 18px; line-height: 1.75; margin-top: 22px; color: #435c4a; }
+.about-copy { font-size: 15px; line-height: 1.9; margin-top: 14px; color: #727c6b; }
+.about-skills { margin-top: 25px; }
+.about-skills h3, .about-languages h3 { font-size: 14px; font-weight: 600; }
+.skill-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.skill-tags > span { font-size: 12px; color: #607756; border: 1px solid #dbe4d3; border-radius: 4px; background: #f0f4ea; padding: 8px 11px; }
+.about-stories { border-top: 1px solid var(--line); margin-top: 27px; }
+.about-stories details { border-bottom: 1px solid var(--line); }
+.about-stories summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 15px; padding: 17px 0; font-size: 14px; font-weight: 500; }
+.about-stories summary::-webkit-details-marker { display: none; }
+.story-toggle { width: 20px; height: 20px; position: relative; flex-shrink: 0; color: var(--green); }
+.story-toggle::before, .story-toggle::after { content: ''; position: absolute; background: currentColor; top: 9px; left: 4px; width: 12px; height: 1px; }
+.story-toggle::after { transform: rotate(90deg); }
+.about-stories details[open] .story-toggle::after { transform: rotate(0); }
+.about-stories details > p { font-size: 14px; line-height: 1.9; color: #727c6b; padding: 0 25px 20px 0; }
+.about-languages { margin-top: 25px; }
+.about-languages > div { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 14px; }
+.about-languages strong { display: block; font-size: 13px; font-weight: 500; }
+.about-languages small { display: block; font-size: 11px; line-height: 1.6; color: #839078; margin-top: 4px; }
+.about-goal { border-left: 3px solid #a5b694; background: #edf2e6; padding: 18px 21px; margin-top: 26px; border-radius: 0 4px 4px 0; }
+.about-goal .eyebrow { font-size: 10px; }
+.about-goal p { font-size: 14px; line-height: 1.85; color: #5b7350; margin-top: 8px; }
+.about-thanks { font-size: 12px; line-height: 1.8; font-style: italic; color: #89947d; margin-top: 17px; }
+@media screen and (max-width: 1150px) {
+  .brand-name { display: none; }
+  .site-header { gap: 20px; }
+  .navigation { gap: 18px; font-size: 13px; }
+  .header-cta { font-size: 12px; gap: 8px; }
+  .about-grid { grid-template-columns: 290px minmax(0, 1fr); gap: 35px; }
+  .about-content > h2 { font-size: 36px; }
+  .map-school-card { left: 12px; gap: 8px; padding-inline: 12px; }
+  .map-school-card div > span { font-size: 10px; }
+  .evidence-tabs > span { display: none; }
+  .finding-tag { display: none; }
+}
+@media screen and (max-width: 950px) {
+  .navigation { display: none; position: absolute; top: 99px; left: 0; right: 0; background: #fcfcf9; border-bottom: 1px solid var(--line); padding: 22px 28px; z-index: 10; }
+  .navigation.open { display: flex; flex-direction: column; gap: 20px; }
+  .menu-toggle { display: block; padding: 8px; }
+  .site-header { position: relative; }
+  .brand-name { display: block; }
+  .header-cta { margin-left: auto; }
+  .evidence-grid { grid-template-columns: 1fr; }
+  .evidence-notes h3 { white-space: normal; }
+  .plan-grid { grid-template-columns: 1fr; }
+  .certificate-grid { grid-template-columns: 1fr; }
+  .certificate-image img { max-width: 450px; margin-inline: auto; }
+  .certificate-body h3 { min-height: 0; }
+}
+@media screen and (max-width: 760px) {
+  .navigation { top: 76px; }
+  .navigation a { font-size: 15px; }
+  .brand-name { font-size: 9px; }
+  .brand-name > span { font-size: 8px; }
+  .header-cta { font-size: 11px; }
+  .about-section { padding-top: 48px; padding-bottom: 42px; }
+  .about-grid { grid-template-columns: 1fr; gap: 35px; }
+  .about-profile { display: grid; grid-template-columns: minmax(0, 1fr); max-width: 420px; width: 100%; margin-inline: auto; }
+  .about-photo { aspect-ratio: 4 / 4.5; }
+  .about-content > h2 { font-size: 37px; }
+  .about-languages > div { grid-template-columns: repeat(2, 1fr); gap: 17px; }
+  .section-heading .pill { font-size: 12px; }
+  .hero-actions .button { font-size: 13px; }
+  .hero-description, .section-intro, .gratitude p { font-size: 16px; }
+  .stat-top { font-size: 12px; }
+  .stat p { font-size: 11px; }
+  .map-school-card { bottom: 66px; }
+  .map-topline { font-size: 8px; letter-spacing: .4px; }
+  .map-bottom { font-size: 9px; }
+  .map-note { padding: 13px; }
+  .map-note strong { font-size: 12px; }
+  .map-note div > span { font-size: 10px; }
+  .resources-grid { grid-template-columns: 1fr; }
+  .gratitude h2 { font-size: 39px; }
+}
+@media screen and (max-width: 400px) {
+  .hero-actions { gap: 11px; }
+  .hero-actions .button { font-size: 12px; }
+  .evidence-tabs button { font-size: 12px; padding-inline: 8px; }
+  .map-card-icon { width: 30px; height: 30px; }
+  .map-school-card strong { font-size: 12px; }
+  .map-school-card div > span { font-size: 9px; }
+  .map-note { right: -6px; }
+  .stat-top { font-size: 11px; }
+  .stat p { font-size: 10px; }
+  .about-content > h2 { font-size: 34px; }
+}
+@media print {
+  .about-section { padding-block: 25px; }
+  .about-grid { grid-template-columns: 200px minmax(0, 1fr); gap: 25px; }
+  .portrait-toggle { display: none; }
+  .about-photo { break-inside: avoid; }
+  .about-content > h2 { font-size: 30px; }
+  .about-lead { font-size: 13px; }
+  .about-copy, .about-stories details > p { font-size: 11px; }
+  .about-languages > div { grid-template-columns: repeat(2, 1fr); }
+  .about-goal { break-inside: avoid; }
+}
