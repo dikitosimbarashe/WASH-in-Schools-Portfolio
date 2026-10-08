@@ -27,8 +27,16 @@ jobs:
           node-version: "22"
           cache: "npm"
 
+      - name: Print toolchain
+        run: |
+          node -v
+          npm -v
+
       - name: Install dependencies
-        run: npm install
+        run: npm install --no-audit --no-fund
+
+      - name: Type check
+        run: npx tsc --noEmit
 
       - name: Build with Vite
         env:
@@ -36,6 +44,14 @@ jobs:
           GITHUB_PAGES_BASE: "${{ github.event.repository.name }}"
           NODE_OPTIONS: "--no-warnings"
         run: npm run build
+
+      - name: Verify build output
+        run: |
+          test -d dist
+          test -f dist/index.html
+          ls -la dist
+          echo "--- dist/index.html ---"
+          sed -n '1,40p' dist/index.html
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
